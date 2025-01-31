@@ -28,19 +28,35 @@
            font-weight: 400;
            font-style: normal;
         }
+        @keyframes dogs {
+          from {
+                 transform: translateX(-100%);
+              }
+          to {
+                transform: translateX(0);
+             }
+          
+        }
+        .dog-animation{
+          animation: dogs 3s linear infinite;
+        }
+        
      </style>
 
 </head>
 <body class="sora-regular">
+
+    <!------ header ------>
+
     <header>
       <!-- nav -->
-        <nav class="bg-[#FFF9F4]">
+        <nav class="bg-[#FFF9F4]  border-gray-400">
             <!-- navbar -->
              <div class="container px-3 mx-auto py-3 md:py-6 flex items-center justify-between">
                 <!-- nav-logo -->
              <div class="flex items-center gap-3">
                 <img src="c1-assets/logo-header.png" alt="pet-logo">
-                <h1 class="text-2xl hidden sm:block">Browse<span class="text-yellow-400">4</span>Pets</h1>
+                <h1 class="text-2xl hidden sm:block">Browse<span class="text-[#FFDC26]">4</span>Pets</h1>
              </div>
 
             <!-- nav-content -->
@@ -54,8 +70,8 @@
              <div class="lg:flex hidden items-center gap-3">
                 <i class="ri-notification-3-line text-2xl"></i>
                 <i class="ri-search-line text-2xl"></i>
-                <button class="border border-yellow-400 px-8 py-3 rounded-lg text-xl">Login</button>
-                <button class="bg-yellow-400 px-8 py-3 rounded-lg text-xl">Register</button>
+                <button class="border border-[#FFDC26] px-8 py-3 rounded-lg text-xl">Login</button>
+                <button class="bg-[#FFDC26] px-8 py-3 rounded-lg text-xl">Register</button>
              </div>
 
             <!-- hambarger menu -->
@@ -67,9 +83,9 @@
         </nav>
 
       <!-- hero section -->
-       <section class="pt-8 md:pt-20">
+       <section class="pt-8 md:pt-20 ">
          <!-- hero container -->
-         <div class="container px-3 xl:h-[750px] lg:h-[550px] md:h-[600px] h-[350px] mx-auto " 
+         <div class="container relative px-3 xl:h-[750px] lg:h-[550px] md:h-[600px] h-[350px] mx-auto " 
          style="
          background-image: url('c1-assets/cat-big.png');
          background-size: contain;
@@ -80,11 +96,20 @@
              <div class="md:w-[80%] lg:w-[60%] xl:w-[40%] space-y-5">
                <h1 class="adlam-regular text-3xl md:text-6xl">Pamper Your Pet, Because They Deserve the Bes</h1>
                <p class=" text-sm md:text-xl">Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-               <button class="bg-yellow-400 px-8 py-3 rounded-lg text-xl">Register</button>
+               <button class="bg-[#FFDC26] px-8 py-3 rounded-lg text-xl">Register</button>
+             </div>
+
+            <!-- hero animation -->
+             <div class="dog-animation absolute md:-top-20 -top-8  right-2 md:right-0 md:w-[70px] w-[30px]  cursor-pointer">
+              <img  src="c1-assets/cute-pet-mid.png" alt="">
              </div>
          </div>
-       </section>
+        </section>
+
     </header>
+
+    <!------ main ------>
+
     <main>
       <!-- Browse your Categories -->
        <section class=" container px-3 mx-auto xl:py-40 lg:py-36 md:py-32 py-14">
@@ -130,7 +155,7 @@
 
                <!-- card-6 -->
                <div class="bg-[#F9DF8A] rounded-xl md:px-12 md:py-9 px-8 py-6 flex flex-col items-center gap-4">
-                <img class="bg-white p-4 rounded-full" src="c1-assets/rabbit-cartoon.png" alt="">
+                <img class="bg-white px-4 py-3 rounded-full" src="c1-assets/rabbit-cartoon.png" alt="">
                 <h2 class="adlam-regular md:text-xl text-base">Rabit</h2>
                 <p class="text-sm">3 items</p>
               </div>
@@ -335,7 +360,7 @@
        </section>
 
       <!-- Everyday low Price -->
-      <section class="container mx-auto px-3 md:py-20 py-10">
+      <section class="container mx-auto px-3 pb-90 md:pt-20 py-10">
         <!-- title -->
         <h1 class="adlam-regular text-2xl md:text-4xl mb-9">Everyday low Price</h1>
 
@@ -371,41 +396,66 @@
          </div>
       </section>
     </main>
-    <footer class="bg-[rgb(255,220,38,0.5)]">
-      <!-- footer container -->
-       <div class="container mx-auto px-3 md:pt-[366px] md:pb-[156px] py-10 grid md:grid-cols-3 grid-cols-1 gap-10">
-        <!-- footer-logo -->
-         <div class="space-y-6">
-          <!-- logo -->
-           <div class="flex items-center gap-2">
-            <img src="c1-assets/logo-footer.png" alt="">
-            <h1 class="text-2xl">Browse<span class="text-yellow-500">4</span>Pets</h1>
-           </div>
-          <!-- text -->
-           <p class="md:text-xl text-base text-[rgb(17,17,17,0.7)]">Discover a world of treats, toys, and <br> essentials handpicked for your furry friends</p>
-         </div>
-        <!-- footer-content -->
-        <div class="md:flex md:justify-center md:items-end">
-          <div class="flex flex-col  md:gap-8 gap-3">
-            <a class="md:text-xl text-base " href="#">Find a pet</a>
-            <a class="md:text-xl text-base " href="#">Breeds</a>
-            <a class="md:text-xl text-base " href="#">Contact Us</a>
-         </div>
-        </div>
-       <!-- footer-social -->
-        <div class="md:flex md:justify-end md:items-end">
-          <div>
-            <p>Follow Us</p>
-            <!-- social icon -->
-             <div class="space-x-4">
-              <i class="ri-facebook-circle-fill"></i>
-              <i class="ri-instagram-line"></i>
-              <i class="ri-linkedin-box-fill"></i>
-              <i class="ri-youtube-fill"></i>
+
+    <!------- footer ------>
+
+    <footer class="bg-[rgb(255,220,38,0.5)] relative">
+           <!-- News letter-->
+         <section class="flex items-center justify-center">
+          <div class="container mx-auto px-3 absolute">
+            <!-- news container -->
+             <div class=" bg-[#FFF9F4] rounded-2xl md:px-16 md:py-24 p-6 flex items-center md:flex-row flex-col gap-[9%] ">
+              <!-- image -->
+               <div>
+                <img src="c1-assets/cute-pet-mid.png" alt="">
+               </div>
+              <!-- content -->
+               <div class="flex flex-col md:items-start md:gap-7 gap-3 items-center mt-10 md:mt-0">
+                <h1 class="adlam-regular md:text-4xl text-2xl" >Get Pawsome News! </h1>
+                <p class="md:text-xl text-xs md:text-start text-center">Exclusive training tips, ticks, product deals and more.</p>
+                <input class="bg-white text-xs md:text-base px-3 py-4 md:w-[472px] w-[100%] rounded-lg" type="email" placeholder="Enter Email">
+                <button class="bg-[#FFDC26] px-8 py-3 rounded-lg md:text-xl text-xs">Subscribe</button>
+               </div>
              </div>
+           </div>
+         </section>
+
+      <!-- footer section -->
+       <section>
+        <div class="container mx-auto px-3 pt-[366px]  py-10 grid md:grid-cols-3 grid-cols-1 gap-10">
+          <!-- footer-logo -->
+           <div class="space-y-6">
+            <!-- logo -->
+             <div class="flex items-center gap-2">
+              <img src="c1-assets/logo-footer.png" alt="">
+              <h1 class="text-2xl">Browse<span class="text-yellow-500">4</span>Pets</h1>
+             </div>
+            <!-- text -->
+             <p class="md:text-xl text-base text-[rgb(17,17,17,0.7)]">Discover a world of treats, toys, and <br> essentials handpicked for your furry friends</p>
+           </div>
+          <!-- footer-content -->
+          <div class="md:flex md:justify-center md:items-end">
+            <div class="flex flex-col  md:gap-8 gap-3">
+              <a class="md:text-xl text-base " href="#">Find a pet</a>
+              <a class="md:text-xl text-base " href="#">Breeds</a>
+              <a class="md:text-xl text-base " href="#">Contact Us</a>
+           </div>
           </div>
-        </div>
-       </div>
+         <!-- footer-social -->
+          <div class="md:flex md:justify-end md:items-end">
+            <div>
+              <p>Follow Us</p>
+              <!-- social icon -->
+               <div class="space-x-4">
+                <i class="ri-facebook-circle-fill"></i>
+                <i class="ri-instagram-line"></i>
+                <i class="ri-linkedin-box-fill"></i>
+                <i class="ri-youtube-fill"></i>
+               </div>
+            </div>
+          </div>
+         </div>
+       </section>
     </footer>
 </body>
-</html>
+</html>  
